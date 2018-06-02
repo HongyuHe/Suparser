@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainInterface</class>
+ <widget class="QMainWindow" name="MainInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icon.qrc">
+    <normaloff>:/icon/SuParser.ico</normaloff>:/icon/SuParser.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QTextEdit" name="textEdit">
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QListWidget" name="listWidget_Catalog">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>27</width>
+     <height>27</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionClick_to_Parse_the_Subtile_File"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
+   <addaction name="actionClose_the_Flie"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuFiles">
+    <property name="title">
+     <string>Files</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icon.qrc">
+      <normaloff>:/pix/folder.png</normaloff>:/pix/folder.png</iconset>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClick_to_Parse_the_Subtile_File"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose_the_Flie"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icon.qrc">
+      <normaloff>:/pix/Edit8.png</normaloff>:/pix/Edit8.png</iconset>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icon.qrc">
+      <normaloff>:/pix/Setting8.png</normaloff>:/pix/Setting8.png</iconset>
+    </property>
+    <widget class="QMenu" name="menuTheme">
+     <property name="title">
+      <string>Theme</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icon.qrc">
+       <normaloff>:/icon/Theme3.png</normaloff>
+       <normalon>:/icon/Theme3.png</normalon>:/icon/Theme3.png</iconset>
+     </property>
+     <property name="toolTipsVisible">
+      <bool>true</bool>
+     </property>
+     <addaction name="actionDefult_Theme"/>
+     <addaction name="actionClassic_Theme"/>
+     <addaction name="actionDark_Theme"/>
+     <addaction name="actionLight_Theme"/>
+    </widget>
+    <widget class="QMenu" name="menuLanguage_2">
+     <property name="title">
+      <string>Language</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icon.qrc">
+       <normaloff>:/pix/accessories-dictionary.png</normaloff>:/pix/accessories-dictionary.png</iconset>
+     </property>
+     <addaction name="actionChinese"/>
+     <addaction name="actionEnglish"/>
+    </widget>
+    <addaction name="actionFont"/>
+    <addaction name="menuTheme"/>
+    <addaction name="menuLanguage_2"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icon.qrc">
+      <normaloff>:/pix/home_help.png</normaloff>:/pix/home_help.png</iconset>
+    </property>
+    <addaction name="actionAbout_SuParser"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menuFiles"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Open4.png</normaloff>:/icon/Open4.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open File</string>
+   </property>
+   <property name="toolTip">
+    <string>Open File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Save2.png</normaloff>:/icon/Save2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/SaveAs3.png</normaloff>:/icon/SaveAs3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionClose_the_Flie">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Close2.png</normaloff>:/icon/Close2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close the File</string>
+   </property>
+   <property name="toolTip">
+    <string>Close the File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Undo2.png</normaloff>:/icon/Undo2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Redo2.png</normaloff>:/icon/Redo2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Paste2.png</normaloff>:/icon/Paste2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/cut.png</normaloff>:/icon/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Copy2.png</normaloff>:/icon/Copy2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/Font2.png</normaloff>:/icon/Font2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="actionDark_Theme">
+   <property name="text">
+    <string>Dark Theme</string>
+   </property>
+  </action>
+  <action name="actionLight_Theme">
+   <property name="text">
+    <string>Light Theme</string>
+   </property>
+  </action>
+  <action name="actionClassic_Theme">
+   <property name="text">
+    <string>Classic Theme</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionDefult_Theme">
+   <property name="text">
+    <string>Defult Theme</string>
+   </property>
+  </action>
+  <action name="actionAbout_SuParser">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/About.png</normaloff>:/icon/About.png</iconset>
+   </property>
+   <property name="text">
+    <string>About SuParser ...</string>
+   </property>
+  </action>
+  <action name="actionClick_to_Parse_the_Subtile_File">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/icon/open.png</normaloff>:/icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Click to Parse the Subtile File</string>
+   </property>
+   <property name="toolTip">
+    <string>Click to Parse the Subtile File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionChinese">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/pix/214.png</normaloff>:/pix/214.png</iconset>
+   </property>
+   <property name="text">
+    <string>Chinese</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/pix/letter71.png</normaloff>:/pix/letter71.png</iconset>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="icon.qrc">
+     <normaloff>:/pix/help8.png</normaloff>:/pix/help8.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
