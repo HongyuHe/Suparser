@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>En2Ch.ts</file>
+        <file>En2Ch.qm</file>
+    </qresource>
+</RCC>

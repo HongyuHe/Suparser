@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/About.png</file>
+        <file>icon/Close2.png</file>
+        <file>icon/Copy2.png</file>
+        <file>icon/cut.png</file>
+        <file>icon/Font2.png</file>
+        <file>icon/open.png</file>
+        <file>icon/Open3.png</file>
+        <file>icon/Open4.png</file>
+        <file>icon/Redo2.png</file>
+        <file>icon/Save2.png</file>
+        <file>icon/SaveAs3.png</file>
+        <file>icon/Theme2.png</file>
+        <file>icon/Theme3.png</file>
+        <file>icon/Undo2.png</file>
+        <file>icon/Paste2.png</file>
+        <file>pix/Setting8.png</file>
+        <file>pix/Edit8.png</file>
+        <file>pix/help8.png</file>
+        <file>pix/home_help.png</file>
+        <file>pix/folder (1).png</file>
+        <file>icon/SuParser.png</file>
+        <file>pix/accessories-dictionary.png</file>
+        <file>pix/214.png</file>
+        <file>pix/letter71.png</file>
+        <file>icon/SuParser.ico</file>
+        <file>SuParser.ico</file>
+        <file>pix/letter-e.png</file>
+        <file>pix/folder.png</file>
+    </qresource>
+</RCC>

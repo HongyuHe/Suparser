@@ -66,7 +66,7 @@ public:
     {
         if (MainInterface->objectName().isEmpty())
             MainInterface->setObjectName(QStringLiteral("MainInterface"));
-        MainInterface->resize(900, 650);
+        MainInterface->resize(1100, 650);
         MainInterface->setMinimumSize(QSize(0, 0));
         QIcon icon;
         icon.addFile(QStringLiteral(":/icon/SuParser.ico"), QSize(), QIcon::Normal, QIcon::Off);
@@ -196,14 +196,14 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(toolBar->sizePolicy().hasHeightForWidth());
         toolBar->setSizePolicy(sizePolicy1);
-        toolBar->setIconSize(QSize(30, 30));
+        toolBar->setIconSize(QSize(27, 27));
         MainInterface->addToolBar(Qt::LeftToolBarArea, toolBar);
         statusbar = new QStatusBar(MainInterface);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         MainInterface->setStatusBar(statusbar);
         menubar = new QMenuBar(MainInterface);
         menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 21));
+        menubar->setGeometry(QRect(0, 0, 1100, 21));
         QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Maximum);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -321,7 +321,7 @@ public:
         actionClose_the_Flie->setToolTip(QApplication::translate("MainInterface", "Close the File", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_SHORTCUT
-        actionClose_the_Flie->setShortcut(QApplication::translate("MainInterface", "Ctrl+W", Q_NULLPTR));
+        actionClose_the_Flie->setShortcut(QApplication::translate("MainInterface", "Ctrl+Q", Q_NULLPTR));
 #endif // QT_NO_SHORTCUT
         actionUndo->setText(QApplication::translate("MainInterface", "Undo", Q_NULLPTR));
 #ifndef QT_NO_SHORTCUT
@@ -354,7 +354,7 @@ public:
         actionClick_to_Parse_the_Subtile_File->setToolTip(QApplication::translate("MainInterface", "Click to Parse the Subtile File", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_SHORTCUT
-        actionClick_to_Parse_the_Subtile_File->setShortcut(QApplication::translate("MainInterface", "Ctrl+V", Q_NULLPTR));
+        actionClick_to_Parse_the_Subtile_File->setShortcut(QApplication::translate("MainInterface", "Ctrl+P", Q_NULLPTR));
 #endif // QT_NO_SHORTCUT
         actionChinese->setText(QApplication::translate("MainInterface", "Chinese", Q_NULLPTR));
         actionEnglish->setText(QApplication::translate("MainInterface", "English", Q_NULLPTR));
